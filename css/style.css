@@ -1,0 +1,289 @@
+:root {
+  --main-color: #1abc9c;
+  --alt-main-color: #36353a;
+}
+body {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 30px;
+}
+a {
+  text-decoration: none;
+}
+
+/* Start Na2sha */
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  color: white;
+  background-color: #36353a;
+  z-index: 1000;
+}
+header .container h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 2.4em;
+  cursor: pointer;
+  user-select: none;
+}
+.container .burger-icon{
+  width: 25px;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items:center;
+  gap:4px;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.container .burger-icon span{
+  width: 100%;
+  background-color: white;
+  height: 2px;
+}
+header .container .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+header .container .links li {
+  margin-right: 20px;
+  font-size: 0.9em;
+  height: 100%;
+  list-style: none;
+}
+/* header .container .links li:hover {
+  color: red;
+} */
+header .container .links li a {
+  color: white;
+  transition: all 0.3s;
+}
+header .container .links li a:hover {
+
+  color:var(--main-color);
+}
+.main-title {
+  background-image: url("../images/slider/big1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  margin: 0;
+  z-index: 0;
+}
+.main-title h1 {
+  font-weight: normal;
+  font-size: 50px;
+  margin-bottom: 35px;
+  word-spacing: 5px;
+}
+.main-title p {
+  max-width: 760px;
+  line-height: 2;
+  font-size: 1em;
+}
+.main-title a {
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 0.9em;
+  margin-top: 40px;
+  transition: 0.3s ease;
+}
+.bounce:hover {
+  animation: bouncing 0.4s both ease-in;
+}
+a.bounce:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+@keyframes bouncing {
+  30% {
+    transform: scaleX(1.2) scaleY(0.8);
+  }
+  60% {
+    transform: scaleX(0.8) scaleY(1.1);
+  }
+  80% {
+    transform: scaleX(1.15) scaleY(0.9);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+.section {
+  width: 100%;
+}
+
+.sec-title {
+  text-align: center;
+  display: block;
+  margin-top: 250px;
+  font-size: 50px;
+  letter-spacing: 5px;
+  font-weight: normal;
+  color: #484f58;
+}
+.section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  margin: 70px auto;
+}
+.section .container .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section .container .box i {
+  padding: 40px;
+  border-radius: 50%;
+  border: 2px solid #484f58;
+  font-size: 30px;
+  transition: 0.3s;
+}
+.section .container .box:hover i {
+  transform: scale(1.15);
+}
+.section .container .box h2 {
+  margin: 50px auto;
+  font-size: 28px;
+  font-weight: 400;
+  color: #484f58;
+}
+.section .container .box p {
+  text-align: center;
+  color: #484f58;
+}
+.section .container .box a {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 40px;
+  margin-top: 20px;
+}
+
+.cho {
+  text-align: center;
+  margin: 70px auto;
+}
+
+.cho a {
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+.cho a:hover,
+.cho a.active {
+  color: var(--main-color);
+  background-color: white;
+  border-color: var(--main-color);
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  transition: all 0.3s;
+  gap: 30px;
+}
+.box div{
+  transition: all 0.3s;
+}
+.box img {
+  max-width: 100%;
+}
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recent .container .view > a {
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  color: white;
+  margin: 40px auto;
+  border-radius: 30px;
+}
+.recent .container .box > div {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.recent .container .box > div::before {
+  content: "Blue Fllower";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color) 80;
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  opacity: 0;
+  transition: 3s linear;
+  transform: scale(1.3);
+}
+.recent .container .box > div:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+@media (max-width: 775px) {
+  .container{
+    position: relative;
+  }
+  .container .burger-icon{
+    display: flex;
+  }
+  .container ul.links{
+    display: none;
+    transition: all 0.3s;
+  }
+  .container ul.links.active{
+    padding: 30px 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left:-30px; 
+    width: calc(100% + 60px);
+    background-color: var(--alt-main-color);
+  }
+  .container ul.links li {
+    height: 15px;
+    width: 100%;
+    padding-left: 20px;
+    transition: all 0.3s;
+  }
+  .container ul.links li:hover{
+    transform: translateX(20px);
+  }
+}
