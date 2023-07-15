@@ -30,7 +30,10 @@ burger.addEventListener("click", () => {
   // display list
   if (list.classList.contains("active")) {
     setTimeout(() => (list.style.opacity = "0"), 10);
-    setTimeout(() => list.classList.toggle("active"), 300);
+    setTimeout(() => {
+      list.classList.toggle("active");
+      list.style.opacity = "1";
+    }, 300);
   } else {
     list.classList.toggle("active");
     setTimeout(() => (list.style.opacity = "1"), 10);

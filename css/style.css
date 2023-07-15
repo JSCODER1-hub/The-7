@@ -261,11 +261,12 @@ a.bounce:hover {
   }
   .container ul.links{
     display: none;
+    opacity: 0;
     transition: all 0.3s;
   }
   .container ul.links.active{
     padding: 30px 0;
-    opacity: 0;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -285,5 +286,12 @@ a.bounce:hover {
   }
   .container ul.links li:hover{
     transform: translateX(20px);
+  }
+}
+@media (min-width: 776px) {
+  
+  .container ul.links{
+    display: flex;
+    opacity: 1;
   }
 }
